@@ -8,12 +8,9 @@ let package = Package(
     products: [
         .library(name: "JSONRPCKit", targets: ["JSONRPCKit"]),
     ],
-    dependencies: [
-        .package(url: "https://github.com/antitypical/Result.git", from: "3.2.0"),
-    ],
     targets: [
-        .target(name: "JSONRPCKit", dependencies: ["Result"]),
+        .target(name: "JSONRPCKit"),
         .testTarget(name: "JSONRPCKitTests", dependencies: ["JSONRPCKit"]),
     ],
-    swiftLanguageVersions: [4]
+    swiftLanguageVersions: [5]
 )
